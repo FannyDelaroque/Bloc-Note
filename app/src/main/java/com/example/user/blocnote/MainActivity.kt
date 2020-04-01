@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+// lorsque l'utilisateur clique sur le bouton "ajouter" le contenu taper s'ajoute au contenu existant
     fun addButtonTouched(button:View){
         var userInput = editTextUser.text.toString()
         val existingText = textViewNote.text.toString()
@@ -30,11 +31,8 @@ class MainActivity : AppCompatActivity() {
 
         saveContent()
 
-
-
-
     }
-
+// enregistrement du contenu du textview dans un SharedPreferences
     private fun saveContent() {
         val myNoteRecorded = getSharedPreferences(SETTINGS_FILE_NAME, Context.MODE_PRIVATE).edit()
         myNoteRecorded.putString(CONTENT_KEY,content)
