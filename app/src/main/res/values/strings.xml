@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BlocNote</string>
+    <string name="Add_mention">Add</string>
 </resources>
